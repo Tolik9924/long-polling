@@ -12,6 +12,8 @@ const EventSourcing = () => {
         subscribe();
     }, []);
 
+    console.log('user');
+
     const subscribe = async () => {
         const eventSource = new EventSource('http://localhost:5000/connect');
         eventSource.onmessage = (event) => {
